@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api_article.views import RegisterAPIView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -29,4 +30,6 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # refresh token
 
     # On ajoutera les endpoints register + articles ici plus tard
+path('api/register/', RegisterAPIView.as_view(), name='api-register'),
+
 ]
