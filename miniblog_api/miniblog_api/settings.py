@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'miniblog_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'miniblogdb',
+        'USER': 'bloguser',
+        'PASSWORD': 'flavie2026',  #le mot de pss
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
